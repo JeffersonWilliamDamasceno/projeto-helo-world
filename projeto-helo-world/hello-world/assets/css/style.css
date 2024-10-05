@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    height: 780px;
+    top: -414px;
+    left: -720px;
+    background: linear-gradient(270deg, #87EFF6 0%, #FFFFFF 100%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+
+    & .navbar ul {
+        display: flex;
+        gap: 50px;
+
+        & li a {
+            color: black;
+        }
+
+    }
+
+    & .menu {
+        display: none;
+    }
+}
+
+main {
+    padding: 40px 80px;
+
+    & .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100vh - 185px);
+        gap: 70px;
+
+        & .lado-esquerdo {
+            max-width: 604px;
+            min-width: 330px;
+            display: flex;
+            flex-direction: column;
+            gap: 58px;
+
+            & .content {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                & p:first-child {
+                    display: flex;
+                    font-size: 24px;
+                    color: red;
+
+                }
+
+                & h1 {
+                    display: flex;
+                    font-size: 40px;
+                    color: #000000;
+                    ;
+                }
+
+                & p:last-child {
+                    display: flex;
+                    font-size: 18px;
+                    color: #000000;
+                }
+            }
+        }
+
+        & .btns {
+            display: flex;
+            gap: 16px;
+
+            & button {
+                padding: 14px 20px;
+                border-radius: 16px;
+                border: none;
+                gap: 10px;
+                background-color: #4ABBC2;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            & button:last-child {
+                background: transparent;
+                border: 2px solid #4ABBC2;
+                color: #4ABBC2;
+
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    main .home {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header .navbar {
+        display: none;
+    }
+
+    header .menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    header,
+    main,
+    footer {
+        padding: 40px 10px;
+    }
+
+    @media screen and (max-width: 500px) {
+        main .home {
+            & .lado-esquerdo .content h1 {
+                font-size: 36px;
+
+                & .lado-direito .img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main .home .lado-esquerdo .btns {
+        flex-direction: column;
+    }
+}
